@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E905AD06FD9194CFB6DE8B0D /* Pods_Cloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF5F1F2387DD4893DED7DCC /* Pods_Cloudy.framework */; };
+		F72B262420FF321F00E5654E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B262320FF321F00E5654E /* AppDelegate.swift */; };
+		F72B262620FF321F00E5654E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B262520FF321F00E5654E /* RootViewController.swift */; };
+		F72B262920FF321F00E5654E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B262720FF321F00E5654E /* Main.storyboard */; };
+		F72B262B20FF322500E5654E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72B262A20FF322500E5654E /* Assets.xcassets */; };
+		F72B262E20FF322500E5654E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72B262C20FF322500E5654E /* LaunchScreen.storyboard */; };
+		F72B263920FF322600E5654E /* CloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B263820FF322600E5654E /* CloudyTests.swift */; };
+		F72B264620FF328E00E5654E /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B264520FF328E00E5654E /* DayViewController.swift */; };
+		F72B264920FF336100E5654E /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B264820FF336100E5654E /* WeekViewController.swift */; };
+		F72B264C20FF395D00E5654E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B264B20FF395D00E5654E /* UIViewController.swift */; };
+		F72B264E20FF39E300E5654E /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B264D20FF39E300E5654E /* UIStoryboard.swift */; };
+		F72B265120FF4FB000E5654E /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B265020FF4FB000E5654E /* Weather.swift */; };
+		F72B265420FF583200E5654E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B265320FF583200E5654E /* APIClient.swift */; };
+		F72B265620FF584100E5654E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B265520FF584100E5654E /* NetworkService.swift */; };
+		F7602DEB2100B9110072A772 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7602DEA2100B9110072A772 /* DayViewModel.swift */; };
+		F7602DED2100BA590072A772 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7602DEC2100BA590072A772 /* WeekViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F72B263520FF322600E5654E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F72B261820FF321F00E5654E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F72B261F20FF321F00E5654E;
+			remoteInfo = Cloudy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2423612740E72121317434F9 /* Pods-Cloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy.debug.xcconfig"; sourceTree = "<group>"; };
+		6A207D31AD8FDAF52A879A69 /* Pods-Cloudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cloudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy.release.xcconfig"; sourceTree = "<group>"; };
+		F72B262020FF321F00E5654E /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B262320FF321F00E5654E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F72B262520FF321F00E5654E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F72B262820FF321F00E5654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F72B262A20FF322500E5654E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F72B262D20FF322500E5654E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F72B262F20FF322500E5654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72B263420FF322600E5654E /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72B263820FF322600E5654E /* CloudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTests.swift; sourceTree = "<group>"; };
+		F72B263A20FF322600E5654E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72B264520FF328E00E5654E /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		F72B264820FF336100E5654E /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		F72B264B20FF395D00E5654E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F72B264D20FF39E300E5654E /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		F72B265020FF4FB000E5654E /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		F72B265320FF583200E5654E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F72B265520FF584100E5654E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F7602DEA2100B9110072A772 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		F7602DEC2100BA590072A772 /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		FEF5F1F2387DD4893DED7DCC /* Pods_Cloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F72B261D20FF321F00E5654E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E905AD06FD9194CFB6DE8B0D /* Pods_Cloudy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B263120FF322600E5654E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFA6068319CABEF292D44C96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEF5F1F2387DD4893DED7DCC /* Pods_Cloudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1009205E8484745A0FE0247 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2423612740E72121317434F9 /* Pods-Cloudy.debug.xcconfig */,
+				6A207D31AD8FDAF52A879A69 /* Pods-Cloudy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F72B261720FF321F00E5654E = {
+			isa = PBXGroup;
+			children = (
+				F72B262220FF321F00E5654E /* Cloudy */,
+				F72B263720FF322600E5654E /* CloudyTests */,
+				F72B262120FF321F00E5654E /* Products */,
+				F1009205E8484745A0FE0247 /* Pods */,
+				AFA6068319CABEF292D44C96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F72B262120FF321F00E5654E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F72B262020FF321F00E5654E /* Cloudy.app */,
+				F72B263420FF322600E5654E /* CloudyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F72B262220FF321F00E5654E /* Cloudy */ = {
+			isa = PBXGroup;
+			children = (
+				F72B262320FF321F00E5654E /* AppDelegate.swift */,
+				F72B262520FF321F00E5654E /* RootViewController.swift */,
+				F72B265220FF577100E5654E /* Configurator */,
+				F72B264F20FF4F9F00E5654E /* Models */,
+				F72B264A20FF393C00E5654E /* Extensions */,
+				F7602DE92100B8EE0072A772 /* View Model */,
+				F72B264320FF323500E5654E /* Weather View Controller */,
+				F72B262A20FF322500E5654E /* Assets.xcassets */,
+				F72B262720FF321F00E5654E /* Main.storyboard */,
+				F72B262C20FF322500E5654E /* LaunchScreen.storyboard */,
+				F72B262F20FF322500E5654E /* Info.plist */,
+			);
+			path = Cloudy;
+			sourceTree = "<group>";
+		};
+		F72B263720FF322600E5654E /* CloudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F72B263820FF322600E5654E /* CloudyTests.swift */,
+				F72B263A20FF322600E5654E /* Info.plist */,
+			);
+			path = CloudyTests;
+			sourceTree = "<group>";
+		};
+		F72B264320FF323500E5654E /* Weather View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F72B264720FF334400E5654E /* Week View Controller */,
+				F72B264420FF325900E5654E /* Day View Controller */,
+			);
+			path = "Weather View Controller";
+			sourceTree = "<group>";
+		};
+		F72B264420FF325900E5654E /* Day View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F72B264520FF328E00E5654E /* DayViewController.swift */,
+			);
+			path = "Day View Controller";
+			sourceTree = "<group>";
+		};
+		F72B264720FF334400E5654E /* Week View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F72B264820FF336100E5654E /* WeekViewController.swift */,
+			);
+			path = "Week View Controller";
+			sourceTree = "<group>";
+		};
+		F72B264A20FF393C00E5654E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F72B264B20FF395D00E5654E /* UIViewController.swift */,
+				F72B264D20FF39E300E5654E /* UIStoryboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F72B264F20FF4F9F00E5654E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F72B265020FF4FB000E5654E /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F72B265220FF577100E5654E /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				F72B265320FF583200E5654E /* APIClient.swift */,
+				F72B265520FF584100E5654E /* NetworkService.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		F7602DE92100B8EE0072A772 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7602DEA2100B9110072A772 /* DayViewModel.swift */,
+				F7602DEC2100BA590072A772 /* WeekViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F72B261F20FF321F00E5654E /* Cloudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72B263D20FF322600E5654E /* Build configuration list for PBXNativeTarget "Cloudy" */;
+			buildPhases = (
+				4A3A346679858FA14CEA4A87 /* [CP] Check Pods Manifest.lock */,
+				F72B261C20FF321F00E5654E /* Sources */,
+				F72B261D20FF321F00E5654E /* Frameworks */,
+				F72B261E20FF321F00E5654E /* Resources */,
+				3A6375DF0F42CF245AE76F70 /* [CP] Embed Pods Frameworks */,
+				F663E4A6ABF50616D981F704 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cloudy;
+			productName = Cloudy;
+			productReference = F72B262020FF321F00E5654E /* Cloudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F72B263320FF322600E5654E /* CloudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72B264020FF322600E5654E /* Build configuration list for PBXNativeTarget "CloudyTests" */;
+			buildPhases = (
+				F72B263020FF322600E5654E /* Sources */,
+				F72B263120FF322600E5654E /* Frameworks */,
+				F72B263220FF322600E5654E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F72B263620FF322600E5654E /* PBXTargetDependency */,
+			);
+			name = CloudyTests;
+			productName = CloudyTests;
+			productReference = F72B263420FF322600E5654E /* CloudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F72B261820FF321F00E5654E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Reshma Unnikrishnan";
+				TargetAttributes = {
+					F72B261F20FF321F00E5654E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					F72B263320FF322600E5654E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = F72B261F20FF321F00E5654E;
+					};
+				};
+			};
+			buildConfigurationList = F72B261B20FF321F00E5654E /* Build configuration list for PBXProject "Cloudy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F72B261720FF321F00E5654E;
+			productRefGroup = F72B262120FF321F00E5654E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F72B261F20FF321F00E5654E /* Cloudy */,
+				F72B263320FF322600E5654E /* CloudyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F72B261E20FF321F00E5654E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B262E20FF322500E5654E /* LaunchScreen.storyboard in Resources */,
+				F72B262B20FF322500E5654E /* Assets.xcassets in Resources */,
+				F72B262920FF321F00E5654E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B263220FF322600E5654E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A6375DF0F42CF245AE76F70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A3A346679858FA14CEA4A87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cloudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F663E4A6ABF50616D981F704 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F72B261C20FF321F00E5654E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B264E20FF39E300E5654E /* UIStoryboard.swift in Sources */,
+				F72B262620FF321F00E5654E /* RootViewController.swift in Sources */,
+				F72B262420FF321F00E5654E /* AppDelegate.swift in Sources */,
+				F7602DED2100BA590072A772 /* WeekViewModel.swift in Sources */,
+				F72B265420FF583200E5654E /* APIClient.swift in Sources */,
+				F72B265620FF584100E5654E /* NetworkService.swift in Sources */,
+				F72B264920FF336100E5654E /* WeekViewController.swift in Sources */,
+				F72B264620FF328E00E5654E /* DayViewController.swift in Sources */,
+				F7602DEB2100B9110072A772 /* DayViewModel.swift in Sources */,
+				F72B264C20FF395D00E5654E /* UIViewController.swift in Sources */,
+				F72B265120FF4FB000E5654E /* Weather.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72B263020FF322600E5654E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72B263920FF322600E5654E /* CloudyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F72B263620FF322600E5654E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F72B261F20FF321F00E5654E /* Cloudy */;
+			targetProxy = F72B263520FF322600E5654E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F72B262720FF321F00E5654E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72B262820FF321F00E5654E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F72B262C20FF322500E5654E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72B262D20FF322500E5654E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F72B263B20FF322600E5654E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F72B263C20FF322600E5654E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F72B263E20FF322600E5654E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2423612740E72121317434F9 /* Pods-Cloudy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FT23MTQ5S9;
+				INFOPLIST_FILE = Cloudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sgf.Cloudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F72B263F20FF322600E5654E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A207D31AD8FDAF52A879A69 /* Pods-Cloudy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FT23MTQ5S9;
+				INFOPLIST_FILE = Cloudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sgf.Cloudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F72B264120FF322600E5654E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FT23MTQ5S9;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sgf.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Debug;
+		};
+		F72B264220FF322600E5654E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FT23MTQ5S9;
+				INFOPLIST_FILE = CloudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sgf.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F72B261B20FF321F00E5654E /* Build configuration list for PBXProject "Cloudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B263B20FF322600E5654E /* Debug */,
+				F72B263C20FF322600E5654E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72B263D20FF322600E5654E /* Build configuration list for PBXNativeTarget "Cloudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B263E20FF322600E5654E /* Debug */,
+				F72B263F20FF322600E5654E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72B264020FF322600E5654E /* Build configuration list for PBXNativeTarget "CloudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72B264120FF322600E5654E /* Debug */,
+				F72B264220FF322600E5654E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F72B261820FF321F00E5654E /* Project object */;
+}
