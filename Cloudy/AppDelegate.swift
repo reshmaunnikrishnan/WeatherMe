@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(weather)
         }
 
+        
+
         return true
     }
 

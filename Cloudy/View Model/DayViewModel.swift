@@ -7,25 +7,24 @@
 //
 
 import Foundation
+import Action
 
 struct DayViewModel {
 
     //MARK: - Properties
     let weatherData : Weather
+    init(weather : Weather) {
+        self.weatherData = weather
+    }
 
     //MARK: - Date Formatters
 
     private let dateFormatter = DateFormatter()
-    private let timeFormatter = DateFormatter()
 
     var date: String {
         //Configure Date Formatter
         dateFormatter.dateFormat = "EEE, MMMM d"
         return dateFormatter.string(from: weatherData.currentDate)
-    }
-
-    var city : String {
-        return weatherData.city
     }
 
     var currentTemp : Double {

@@ -23,6 +23,8 @@
 		F72B265620FF584100E5654E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72B265520FF584100E5654E /* NetworkService.swift */; };
 		F7602DEB2100B9110072A772 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7602DEA2100B9110072A772 /* DayViewModel.swift */; };
 		F7602DED2100BA590072A772 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7602DEC2100BA590072A772 /* WeekViewModel.swift */; };
+		F7B0522B2101F1900095DE0C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0522A2101F1900095DE0C /* UIImage+Extension.swift */; };
+		F7B0522D21021D0E0095DE0C /* WeatherWeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0522C21021D0E0095DE0C /* WeatherWeekViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F72B265520FF584100E5654E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F7602DEA2100B9110072A772 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		F7602DEC2100BA590072A772 /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		F7B0522A2101F1900095DE0C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F7B0522C21021D0E0095DE0C /* WeatherWeekViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWeekViewViewModel.swift; sourceTree = "<group>"; };
 		FEF5F1F2387DD4893DED7DCC /* Pods_Cloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +177,7 @@
 			children = (
 				F72B264B20FF395D00E5654E /* UIViewController.swift */,
 				F72B264D20FF39E300E5654E /* UIStoryboard.swift */,
+				F7B0522A2101F1900095DE0C /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				F7602DEA2100B9110072A772 /* DayViewModel.swift */,
 				F7602DEC2100BA590072A772 /* WeekViewModel.swift */,
+				F7B0522C21021D0E0095DE0C /* WeatherWeekViewViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -310,12 +316,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Cloudy/Pods-Cloudy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -368,9 +376,11 @@
 				F72B264E20FF39E300E5654E /* UIStoryboard.swift in Sources */,
 				F72B262620FF321F00E5654E /* RootViewController.swift in Sources */,
 				F72B262420FF321F00E5654E /* AppDelegate.swift in Sources */,
+				F7B0522B2101F1900095DE0C /* UIImage+Extension.swift in Sources */,
 				F7602DED2100BA590072A772 /* WeekViewModel.swift in Sources */,
 				F72B265420FF583200E5654E /* APIClient.swift in Sources */,
 				F72B265620FF584100E5654E /* NetworkService.swift in Sources */,
+				F7B0522D21021D0E0095DE0C /* WeatherWeekViewViewModel.swift in Sources */,
 				F72B264920FF336100E5654E /* WeekViewController.swift in Sources */,
 				F72B264620FF328E00E5654E /* DayViewController.swift in Sources */,
 				F7602DEB2100B9110072A772 /* DayViewModel.swift in Sources */,

@@ -15,13 +15,18 @@ struct Forecast {
     let date : Date
     let imageID : String
     let temp: Float
+    let tempMin: Float
+    let tempMax: Float
     let description : String
 
     init?(json: JSON) {
         guard
             let timestamp = json["dt"].double ,
             let imageID = json["weather"][0]["icon"].string,
+            let tempMin = json["main"]["temp_min"].float,
+            let tempMax = json["main"]["temp_max"].float,
             let temp = json["main"]["temp"].float,
+
             let description = json["weather"][0]["description"].string
             else  {
                 return nil
@@ -31,30 +36,27 @@ struct Forecast {
         self.imageID = imageID
         self.temp = temp
         self.description = description
+        self.tempMin = tempMin
+        self.tempMax = tempMax
     }
 }
 
 struct Weather {
-    let city: String
+
     let currentDate: Date
     let temperature: Double
-    let icon: String
     let foreCasts : [Forecast]
     let currentWeather : Forecast
     init?(json: JSON) {
         guard
             let currentTimeStamp = json["list"][0]["dt"].double,
             let currentTemp =  json["list"][0]["main"]["temp"].double,
-            let imageIcon = json["list"][0]["weather"]["icon"].string,
-            let city = json["city"]["name"].string ,
             let foreCastData =  json["list"].array
             else {
                 return nil
                     }
-        self.city = city
         self.currentDate = Date(timeIntervalSince1970: currentTimeStamp)
         self.temperature = currentTemp
-        self.icon = imageIcon
         let forecasts = foreCastData.map(Forecast.init)
         guard !forecasts.isEmpty else {
             return nil

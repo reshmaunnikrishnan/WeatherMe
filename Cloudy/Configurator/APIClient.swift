@@ -39,7 +39,8 @@ class APIClient {
             "q" : city! ,
             "units" :  "metric",
             "type" : "like",
-            "APPID" : APPID
+            "APPID" : APPID,
+            "Content-Type" : "application/json"
         ]
 
 
@@ -64,7 +65,10 @@ class APIClient {
                     guard 200..<400 ~= response.statusCode else {
                         throw Error.badHTTPStatus(code: response.statusCode)
                     }
-                return Weather(json: try JSON(data: data))!
+
+                let json = try JSON(data: data)
+                let weather = Weather(json: json)!
+                return weather
                 }.asObservable()
     }
 
