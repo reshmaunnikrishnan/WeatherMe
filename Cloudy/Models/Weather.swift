@@ -43,6 +43,7 @@ struct Forecast {
 
 struct Weather {
 
+    let city: String
     let currentDate: Date
     let temperature: Double
     let foreCasts : [Forecast]
@@ -51,12 +52,14 @@ struct Weather {
         guard
             let currentTimeStamp = json["list"][0]["dt"].double,
             let currentTemp =  json["list"][0]["main"]["temp"].double,
-            let foreCastData =  json["list"].array
+            let foreCastData =  json["list"].array,
+            let cityName = json["city"]["name"].string
             else {
                 return nil
                     }
         self.currentDate = Date(timeIntervalSince1970: currentTimeStamp)
         self.temperature = currentTemp
+        self.city = cityName
         let forecasts = foreCastData.map(Forecast.init)
         guard !forecasts.isEmpty else {
             return nil

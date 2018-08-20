@@ -8,32 +8,31 @@
 
 import UIKit
 import Action
+import RxSwift
+import RxCocoa
 
 struct WeeKViewModel {
 
-    //MARK :- Properties
+   //MARK :- Properties
 
-    let forecastData : Forecast
+
+
+    let forecastData: Observable<[Forecast]>
 
     //Mark :- User Realatable Data
     private let dateformatter =  DateFormatter()
+    
+//
+//    var date : Driver<String> {
+//        //configure DateFormatter
+//         dateformatter.dateFormat = "EEE, MMMM d"
+//        let val = dateformatter.string(from: forecastData.date)
+//         return val
+//    }
+//
+//    var image: AnyObserver<UIImage>  {
+//        return UIImage(named: forecastData.imageID)
+//    }
 
-    var date : String {
-        //configure DateFormatter
-         dateformatter.dateFormat = "EEE, MMMM d"
-         return dateformatter.string(from: forecastData.date)
-    }
-
-    var image: UIImage?  {
-        return UIImage(named: forecastData.imageID)
-    }
-
-    var numberOfSections: Int {
-        return 1
-    }
-
-    var numberOfRows: Int {
-        return 7
-    }
 
 }

@@ -125,11 +125,11 @@
 			children = (
 				F72B262320FF321F00E5654E /* AppDelegate.swift */,
 				F72B262520FF321F00E5654E /* RootViewController.swift */,
+				F7602DE92100B8EE0072A772 /* View Model */,
+				F72B264320FF323500E5654E /* Weather View Controller */,
 				F72B265220FF577100E5654E /* Configurator */,
 				F72B264F20FF4F9F00E5654E /* Models */,
 				F72B264A20FF393C00E5654E /* Extensions */,
-				F7602DE92100B8EE0072A772 /* View Model */,
-				F72B264320FF323500E5654E /* Weather View Controller */,
 				F72B262A20FF322500E5654E /* Assets.xcassets */,
 				F72B262720FF321F00E5654E /* Main.storyboard */,
 				F72B262C20FF322500E5654E /* LaunchScreen.storyboard */,

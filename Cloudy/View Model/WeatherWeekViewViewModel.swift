@@ -13,7 +13,7 @@ struct WeatherWeekViewViewModel {
 
     //MARK:- Parameters
 
-    let weatherData: [Forecast]
+//    let weatherData: [Forecast]
     //MARK:- Table View Detailings
 
     var numberOfSections: Int {
@@ -24,9 +24,8 @@ struct WeatherWeekViewViewModel {
         return 7
     }
 
-    //Mark: - Methods
-    func viewModel(for Index: Int) -> WeeKViewModel {
-        return WeeKViewModel(forecastData: weatherData[Index])
-    }
-    
+    //Mark: - MEthods
+//    func viewModel(for Index: Int) -> WeeKViewModel {
+//        return WeeKViewModel(foreCast: weatherData[Index])
+//    }
 }

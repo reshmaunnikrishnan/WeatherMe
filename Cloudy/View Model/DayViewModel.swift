@@ -8,26 +8,52 @@
 
 import Foundation
 import Action
+import RxSwift
+import RxCocoa
 
-struct DayViewModel {
-
+protocol DayViewModelType {
     //MARK: - Properties
-    let weatherData : Weather
-    init(weather : Weather) {
-        self.weatherData = weather
+    var date: Driver<String> { get }
+    var city: Driver<String> { get }
+
+    var temperature: Driver<String> {get}
+    var description: Driver<String> {get}
+//    var isLoading: Driver<Bool> {get}
+//    var hasFailed: Driver<Bool> {get}
+//}
+}
+struct DayViewModel: DayViewModelType {
+    var city: Driver<String> {
+        return weatherData
+            .map { $0.city }
+            .asDriver(onErrorJustReturn: "unknown City")
     }
 
-    //MARK: - Date Formatters
 
-    private let dateFormatter = DateFormatter()
+    private let bag: DisposeBag = DisposeBag()
 
-    var date: String {
-        //Configure Date Formatter
-        dateFormatter.dateFormat = "EEE, MMMM d"
-        return dateFormatter.string(from: weatherData.currentDate)
+    let weatherData: Observable<Weather>
+
+
+    var date: Driver<String> {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE, MMMM d"
+        return weatherData
+            .map{ $0.currentDate }
+            .map { formatter.string(from: $0) }.asDriver(onErrorJustReturn: "Error")
     }
 
-    var currentTemp : Double {
-        return weatherData.temperature
+    var temperature: Driver<String> {
+        return weatherData
+            .map{ $0.temperature }
+            .map { String(format:  "%.16f", $0)}.asDriver(onErrorJustReturn: "_")
     }
+
+    var description: Driver<String> {
+        return weatherData
+            .map{ $0.currentWeather.description }.asDriver(onErrorJustReturn: "_")
+    }
+
+
+
 }

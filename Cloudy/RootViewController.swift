@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class RootViewController: UIViewController {
+
+    private var weatherService: APIClient {
+        return APIClient.shared
+    }
+
+    let disposeBag = DisposeBag()
+
 
     //MARK: - Properties
 
@@ -42,6 +51,7 @@ final class RootViewController: UIViewController {
 
         setupChildViewControllers()
 
+        setUpDetailsForView()
     }
 
 
@@ -70,7 +80,13 @@ final class RootViewController: UIViewController {
 
     }
 
+    func setUpDetailsForView() {
 
+
+        let weather: Observable<Weather> = weatherService.getWeatherForeCast(city: "Berlin")
+        dayViewController.viewModel = DayViewModel(weatherData: weather)
+        weekViewController.viewModel = WeeKViewModel(forecastData: weather.map{$0.foreCasts})
+}
 }
 
 
