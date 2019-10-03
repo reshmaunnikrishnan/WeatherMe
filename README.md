@@ -1,6 +1,6 @@
 # Cloudy
 
-A basic Weather App using RxSwift programming.The api data is parsed usinng Jason.
+A basic Weather App using RxSwift programming.The api data is parsed using Jason library.
 
 ### ToDO
 
